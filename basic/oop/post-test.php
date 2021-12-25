@@ -24,8 +24,18 @@ require ('Wiki.php');
 //$wiki = new Wiki('Lorem ipsum..');
 //echo $wiki->save();
 
-require ('ArrayStorage.php');
-$storage = new ArrayStorage();
+//require ('ArrayStorage.php');
+//$storage = new ArrayStorage();
+//$wiki1 = new Wiki('First Wiki', $storage);
+//$wiki2 = new Wiki('Second Wiki', $storage);
+//
+//$wiki1->save();
+//$wiki2->save();
+//
+//var_dump($storage->collection());
+
+require ('FileStorage.php');
+$storage = new FileStorage();
 $wiki1 = new Wiki('First Wiki', $storage);
 $wiki2 = new Wiki('Second Wiki', $storage);
 
