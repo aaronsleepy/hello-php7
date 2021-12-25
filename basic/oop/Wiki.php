@@ -8,13 +8,19 @@ class Wiki extends Writing
     /**
      * @param $title
      */
-    public function __construct($title)
+    public function __construct($title, ArrayStorage $storage)
     {
         $this->title = $title;
+        $this->storage = $storage;
     }
 
     public function save()
     {
-        echo "saving...";
+        echo "saving...\n";
+
+        $this->storage->put([
+            'model' => __CLASS__,
+            'title' => $this->title
+        ]);
     }
 }
