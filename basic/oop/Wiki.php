@@ -8,7 +8,7 @@ class Wiki extends Writing
     /**
      * @param $title
      */
-    public function __construct($title, ArrayStorage $storage)
+    public function __construct($title, StorageInterface $storage)
     {
         $this->title = $title;
         $this->storage = $storage;
